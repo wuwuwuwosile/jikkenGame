@@ -5,6 +5,7 @@ public class SoundEffect : MonoBehaviour
 {
     public static SoundEffect Instance;
 
+    public AudioClip winSound;
     public AudioClip eatSound;
     public AudioClip beEatSound;
     public AudioClip crashSound;
@@ -31,6 +32,11 @@ public class SoundEffect : MonoBehaviour
     public void MakeCrashSound()
     {
         MakeSound(crashSound);
+    }
+
+    public void MakeWinSound()
+    {
+        MakeSound(winSound);
     }
 
 

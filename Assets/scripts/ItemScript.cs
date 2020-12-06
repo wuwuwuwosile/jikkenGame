@@ -11,6 +11,7 @@ public class ItemScript : MonoBehaviour
         {
             SoundEffect.Instance.MakeEatSound();
             Destroy(gameObject);
+            GameManager.countEat();
         }
     }
 
