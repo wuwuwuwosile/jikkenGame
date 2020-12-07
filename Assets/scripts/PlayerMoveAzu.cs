@@ -84,4 +84,65 @@ public class PlayerMoveAzu : MonoBehaviour
         }
     }
 
+    /*
+    public void getPosOfBrrAround()
+    {
+        RaycastHit2D hitUp = Physics2D.Raycast((Vector2)transform.position + Vector2.up/2, Vector2.up);
+        Vector2 upBrr = (Vector2)hitUp.transform.position;
+
+        RaycastHit2D hitDown = Physics2D.Raycast((Vector2)transform.position + Vector2.down/2, Vector2.down);
+        Vector2 downBrr = (Vector2)hitDown.transform.position;
+
+        RaycastHit2D hitLeft = Physics2D.Raycast((Vector2)transform.position + Vector2.left/2, Vector2.left);
+        Vector2 leftBrr = (Vector2)hitLeft.transform.position;
+
+        RaycastHit2D hitRight = Physics2D.Raycast((Vector2)transform.position + Vector2.right/2, Vector2.right);
+        Vector2 rightBrr = (Vector2)hitRight.transform.position;
+    }
+    */
+
+    public RaycastHit2D getUpBrrInfo()
+    {
+        RaycastHit2D[] temp = Physics2D.RaycastAll((Vector2)transform.position, Vector2.up);
+        foreach(RaycastHit2D hit in temp)
+        {
+            Transform t = hit.transform.parent;
+            if (t != null && t.name == "brr") return hit;
+        }
+        return temp[0];
+    }
+
+    public RaycastHit2D getDownBrrInfo()
+    {
+        RaycastHit2D[] temp = Physics2D.RaycastAll((Vector2)transform.position, Vector2.down);
+        foreach(RaycastHit2D hit in temp)
+        {
+            Transform t = hit.transform.parent;
+            if (t != null && t.name == "brr") return hit;
+        }
+        return temp[0];
+    }
+
+    public RaycastHit2D getLeftBrrInfo()
+    {
+        RaycastHit2D[] temp = Physics2D.RaycastAll((Vector2)transform.position, Vector2.left);
+        foreach(RaycastHit2D hit in temp)
+        {
+            Transform t = hit.transform.parent;
+            if (t != null && t.name == "brr") return hit;
+        }
+        return temp[0];
+    }
+
+    public RaycastHit2D getRightBrrInfo()
+    {
+        RaycastHit2D[] temp = Physics2D.RaycastAll((Vector2)transform.position, Vector2.right);
+        foreach(RaycastHit2D hit in temp)
+        {
+            Transform t = hit.transform.parent;
+            if (t != null && t.name == "brr") return hit;
+        }
+        return temp[0];
+    }
+
 }
