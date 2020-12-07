@@ -2452,7 +2452,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335454921}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e932df35bc46f84585ed04aeb4da0d2, type: 3}
@@ -5060,7 +5060,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784809170}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e932df35bc46f84585ed04aeb4da0d2, type: 3}
@@ -8954,6 +8954,7 @@ GameObject:
   - component: {fileID: 1414331511}
   - component: {fileID: 1414331512}
   - component: {fileID: 1414331513}
+  - component: {fileID: 1414331514}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -9003,6 +9004,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1ce4c2727686743b0a5197bfac5f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1414331514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414331510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9f273197c17974b8826d0a9c9f6f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  access_2: {fileID: 8300000, guid: f7bbc1bca2c031f45ac4bd945686802d, type: 3}
+  access_3: {fileID: 8300000, guid: eb0dc9f85547dca418fbcdd38f3ae8b3, type: 3}
+  access_4: {fileID: 8300000, guid: 42701fe27589972408c001100191844d, type: 3}
 --- !u!4 &1451466722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1394847817507543344, guid: 912a66756638f024f9242088e0b89c03,
@@ -10828,7 +10844,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718094599}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e932df35bc46f84585ed04aeb4da0d2, type: 3}
@@ -12283,7 +12299,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012077496}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f62e7d4167e00af429b776980c3a71cd, type: 3}
