@@ -2,21 +2,45 @@
 
 public class dtmfSound : MonoBehaviour
 {
-    public static dtmfSound Instance;
-
+    AudioSource m_AudioSource;
     public AudioClip access_2;
     public AudioClip access_3;
     public AudioClip access_4;
 
-    void Awake()
+    private int path = 0;
+
+    public void Start()
     {
-        if (Instance != null)
-        {
-            Debug.LogError("Multiple instances of SoundEffectsHelper!");
-        }
-        Instance = this;
+        Debug.Log("1");
+        m_AudioSource = GetComponent<AudioSource>();
+        m_AudioSource.Play();
     }
 
+    public void Update()
+    {
+        int pathCount = GameObject.Find("player").GetComponent<PlayerMoveAzu>().refreshPath();
+        if (path != pathCount)
+        {
+            switch (pathCount)
+            {
+                case 2: {
+                    Access_2_Sound();
+                    break;
+                }
+                case 3: {
+                    Access_3_Sound();
+                    break;
+                }
+                case 4: {
+                    Access_4_Sound();
+                    break;
+                }
+                default:break;
+            }
+            Debug.Log(pathCount);
+            path = pathCount;
+        }
+    }
     public void Access_2_Sound()
     {
         MakeSound(access_2);
@@ -34,6 +58,7 @@ public class dtmfSound : MonoBehaviour
 
     private void MakeSound(AudioClip originalClip)
     {
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        m_AudioSource.clip = originalClip;
+        m_AudioSource.Play();
     }
 }

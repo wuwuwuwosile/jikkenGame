@@ -145,4 +145,14 @@ public class PlayerMoveAzu : MonoBehaviour
         return temp[0];
     }
 
+    public int refreshPath()
+    {
+        int count = 0;
+        if (getUpBrrInfo().distance > 1.0f) count ++;
+        if (getDownBrrInfo().distance > 1.0f) count ++;
+        if (getLeftBrrInfo().distance > 1.0f) count ++;
+        if (getRightBrrInfo().distance > 1.0f) count ++;
+        return count;
+    }
+
 }
