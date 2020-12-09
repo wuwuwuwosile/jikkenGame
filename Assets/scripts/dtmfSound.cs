@@ -11,7 +11,7 @@ public class dtmfSound : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log("1");
+        // Debug.Log("1");
         m_AudioSource = GetComponent<AudioSource>();
         m_AudioSource.Play();
     }

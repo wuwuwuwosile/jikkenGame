@@ -2460,7 +2460,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -5068,7 +5068,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -5850,11 +5850,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917079735}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f7bbc1bca2c031f45ac4bd945686802d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -6015,6 +6015,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d899fb006c8e05c408a647580f6a40ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audios:
+  - {fileID: 8300000, guid: f7bbc1bca2c031f45ac4bd945686802d, type: 3}
+  - {fileID: 8300000, guid: 9dbe75aed23065b4a88f4738130a780d, type: 3}
 --- !u!1001 &919795659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8717,7 +8720,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -9691,11 +9694,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545655464}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f7bbc1bca2c031f45ac4bd945686802d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -9856,6 +9859,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d06497d5e8a75d47b78b5de2087a189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audios:
+  - {fileID: 8300000, guid: f7bbc1bca2c031f45ac4bd945686802d, type: 3}
+  - {fileID: 8300000, guid: 9dbe75aed23065b4a88f4738130a780d, type: 3}
 --- !u!1001 &1548332391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10949,7 +10955,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -12404,7 +12410,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
