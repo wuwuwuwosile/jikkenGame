@@ -37,7 +37,7 @@ public class dtmfSound : MonoBehaviour
                 }
                 default:break;
             }
-            Debug.Log(pathCount);
+            // Debug.Log(pathCount);
             path = pathCount;
         }
     }

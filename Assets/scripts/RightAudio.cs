@@ -7,11 +7,13 @@ public class RightAudio : MonoBehaviour
     private bool mode = false;
     private AudioSource m_AudioSource;
     public AudioClip[] audios;
+    private float default_pitch;
     // Start is called before the first frame update
     void Start()
     {
         mode = GameManager.mode;
         m_AudioSource = GetComponent<AudioSource>();
+        default_pitch = m_AudioSource.pitch;
         if (!mode) 
         {
             m_AudioSource.clip = audios[0];
@@ -19,7 +21,7 @@ public class RightAudio : MonoBehaviour
         }
         else {
             m_AudioSource.clip = audios[1];
-            m_AudioSource.spatialBlend = 0.0f;
+            // m_AudioSource.spatialBlend = 0.0f;
             m_AudioSource.panStereo = 1.0f;
             m_AudioSource.loop = false;
         }
@@ -29,6 +31,10 @@ public class RightAudio : MonoBehaviour
     void Update()
     {
         RaycastHit2D hit = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getRightBrrInfo();
+        float distance_up = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getUpBrrInfo().distance - 0.5f;
+        float distance_down = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getDownBrrInfo().distance - 0.5f;
+        if ((int)distance_up == 0 && (int)distance_down == 0) m_AudioSource.pitch = default_pitch;
+        else m_AudioSource.pitch = (0.4f / (distance_up + distance_down) * distance_down + 0.8f ) * default_pitch;
         if (!mode) {
             transform.position = hit.transform.position;
         }
@@ -36,7 +42,7 @@ public class RightAudio : MonoBehaviour
             float distance = hit.distance - 0.5f;
             if (Input.GetKeyDown("space"))
             {
-                Debug.Log("Right" + distance);
+                // Debug.Log("Right" + distance);
                 playByDis(distance);
             }
         }
@@ -47,22 +53,22 @@ public class RightAudio : MonoBehaviour
     {
         switch ((int)distance)
             {
-                case 1:
+                case 0:
                     m_AudioSource.PlayDelayed(0.1f);
                     break;
-                case 2:
+                case 1:
                     m_AudioSource.PlayDelayed(0.28f);
                     break;
-                case 3:
+                case 2:
                     m_AudioSource.PlayDelayed(0.46f);
                     break;
-                case 4:
+                case 3:
                     m_AudioSource.PlayDelayed(0.64f);
                     break;
-                case 5:
+                case 4:
                     m_AudioSource.PlayDelayed(0.82f);
                     break;
-                case 6:
+                case 5:
                     m_AudioSource.PlayDelayed(1.0f);
                     break;
                 default:
