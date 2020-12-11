@@ -19,6 +19,6 @@ public class UpBrrInfo : MonoBehaviour
         RaycastHit2D hit = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getUpBrrInfo();
         Vector2 pos = (Vector2)hit.transform.position;
         float distance = hit.distance - 0.5f;
-        text_UpBrrInfo.text = pos.ToString() + "\n" + distance.ToString();
+        text_UpBrrInfo.text = pos.ToString() + "\n" + System.Convert.ToInt32(distance).ToString();
     }
 }

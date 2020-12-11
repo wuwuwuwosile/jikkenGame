@@ -33,12 +33,10 @@ public class RightAudio : MonoBehaviour
         RaycastHit2D hit = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getRightBrrInfo();
         float distance_up = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getUpBrrInfo().distance - 0.5f;
         float distance_down = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getDownBrrInfo().distance - 0.5f;
-        if ((int)distance_up == 0 && (int)distance_down == 0) m_AudioSource.pitch = default_pitch;
+        if (System.Convert.ToInt32(distance_up) == 0 && System.Convert.ToInt32(distance_down) == 0) m_AudioSource.pitch = default_pitch;
         else m_AudioSource.pitch = (0.4f / (distance_up + distance_down) * distance_down + 0.8f ) * default_pitch;
-        if (!mode) {
-            transform.position = hit.transform.position;
-        }
-        else if (mode) {
+        transform.position = hit.transform.position;
+        if (mode) {
             float distance = hit.distance - 0.5f;
             if (Input.GetKeyDown("space"))
             {
@@ -51,7 +49,7 @@ public class RightAudio : MonoBehaviour
 
     void playByDis(float distance)
     {
-        switch ((int)distance)
+        switch (System.Convert.ToInt32(distance))
             {
                 case 0:
                     m_AudioSource.PlayDelayed(0.1f);

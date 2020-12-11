@@ -19,6 +19,6 @@ public class RightBrrInfo : MonoBehaviour
         RaycastHit2D hit = GameObject.Find("player").GetComponent<PlayerMoveAzu>().getRightBrrInfo();
         Vector2 pos = (Vector2)hit.transform.position;
         float distance = hit.distance - 0.5f;
-        text_RightBrrInfo.text = pos.ToString() + "\n" + distance.ToString();
+        text_RightBrrInfo.text = pos.ToString() + "\n" + System.Convert.ToInt32(distance).ToString();
     }
 }

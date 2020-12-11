@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static int k = 0;
     // if mode == true 時間差
     // if mode == false　強度差
-    public static bool mode = true;
+    public static bool mode = false;
 
 
     public static void countEat()
