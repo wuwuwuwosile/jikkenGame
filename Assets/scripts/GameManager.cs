@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     {
         // Eat 1 item
         i ++;
-        // Have eaten 3 item
-        if (i == 3) {
+        // Have eaten i item
+        if (i == 1) {
 
             
             SoundEffect.Instance.MakeWinSound();
